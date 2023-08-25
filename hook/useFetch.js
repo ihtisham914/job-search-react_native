@@ -21,6 +21,7 @@ const useFetch = (endpoint, query) => {
     setIsLoading(true);
     try {
       const response = await axios.request(options);
+      setTimeout(response, 3000);
 
       setData(response.data.data);
       setIsLoading(false);
