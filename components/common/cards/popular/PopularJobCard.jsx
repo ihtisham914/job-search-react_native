@@ -7,7 +7,7 @@ import styles from "./popularjobcard.style";
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
   return (
     <TouchableOpacity
-      style={styles.container(selectedJob, item)}
+      style={({ marginHorizontal: 4 }, styles.container(selectedJob, item))}
       onPress={() => handleCardPress(item)}
     >
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
@@ -25,7 +25,9 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
         {item.employer_name}
       </Text>
       <View style={styles.infoContainer}>
-        <Text style={styles.jobName(selectedJob, item)}>{item.job_title}</Text>
+        <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>
+          {item.job_title}
+        </Text>
         <Text style={styles.location}>{item.job_country}</Text>
       </View>
     </TouchableOpacity>

@@ -27,7 +27,7 @@ const Home = () => {
         }}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View sytle={{ flex: 1, padding: SIZES.medium }}>
+        <View sytle={{ flex: 1, padding: SIZES.large }}>
           <Welcome />
           <Popularjobs />
           <Nearbyjobs />
